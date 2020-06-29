@@ -92,9 +92,9 @@ ul li ul li a {
 ############ NAVIGATION CONTAINER END ###############
 #####################################################*/
 
-/*************************************************************
-  HEADER
-**************************************************************/
+/* ##################################################
+############ PROFILE CONTAINER START ###############
+#####################################################*/
 .profile__section {
   position: relative;
   display: block;
@@ -172,6 +172,56 @@ ul li ul li a {
   width: 320px;
   height: auto;
 }
+
+
+/* ##################################################
+############ PROFILE CONTAINER END ###############
+#####################################################*/
+
+/* ##################################################
+############ SKILLS CONTAINER START ###############
+#####################################################*/
+
+.skill__section {
+  background: #fff;
+  box-shadow: 4px 10px 20px #333;
+  z-index: 1;
+  min-height: 74vh;
+  width: 100%;
+  position: relative;
+}
+
+.skills__group{
+  width: 60%;
+  padding: 4rem 0 0 0;
+  margin: auto;
+}
+
+.skills__person{
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.skills{
+  width: 360px;
+  margin: 4rem auto 0;
+  text-align: center;
+}
+
+.skills h4{
+  font-size: 28px;
+  font-weight: 500;
+  padding: 8px;
+  color: #333;
+}
+
+.skills strong{
+  font-size: 14px;
+  color: #727272;
+  font-weight: 400;
+}
+
 /*************************************************************
   SECTIONS
 **************************************************************/
@@ -183,12 +233,6 @@ section {
   transform-style: inherit;
 }
 
-.section1 {
-  background: #fff;
-  box-shadow: 4px 10px 20px #333;
-  z-index: 1;
-  min-height: 74vh;
-}
 
 .section2::before {
   content: '';
