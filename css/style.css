@@ -184,7 +184,7 @@ ul li ul li a {
 
 .skill__section {
   background: #fff;
-  box-shadow: 4px 10px 20px #333;
+  box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.3);
   z-index: 1;
   min-height: 74vh;
   width: 100%;
@@ -205,7 +205,7 @@ ul li ul li a {
 
 .skills{
   width: 360px;
-  margin: 4rem auto 0;
+  margin: 3rem auto 0;
   text-align: center;
 }
 
@@ -213,7 +213,7 @@ ul li ul li a {
   font-size: 28px;
   font-weight: 500;
   padding: 8px;
-  color: #333;
+  color: #fff;
 }
 
 .skills strong{
@@ -222,59 +222,107 @@ ul li ul li a {
   font-weight: 400;
 }
 
+.skills ul{
+  display: block;
+  list-style: none;
+  margin: 2rem auto;
+}
+
+.skills ul li{
+  display: inline-block;
+  width: 32px;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* ##################################################
+############ SKILLS CONTAINER END ###############
+#####################################################*/
+
 /*************************************************************
-  SECTIONS
+  SECTIONS BASIC STYLES START
 **************************************************************/
 section {
   position: relative;
   min-height: 80vh;
   width: 100%;
-  position: relative;
   transform-style: inherit;
 }
 
 
-.section2::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  display: block;
-  background: url(https://picsum.photos/g/1920/1080?random) top center;
-  background-size: cover;
-  transform: translateZ(-.5px) scale(1.6);
-  z-index: -1;
-}
-
 /*************************************************************
-  BASIC STYLES
+  SECTIONS BASIC STYLES END
 **************************************************************/
 
-.author {
-  position: absolute;
-  z-index: 999;
-  top: 0;
-  right: 0;
-  padding: .5rem 1rem;
-  background: #fafafa;
-  border-bottom-left-radius: 5px;
-  transition: 300ms;
-}
+/* ##################################################
+############ SKILLS CONTAINER START ###############
+#####################################################*/
 
-.author a,
-.author a:visited {
-  color: #333;
-  text-decoration: none;
+.projects__section {
+  position: relative;
   display: block;
-  transition: 300ms;
+  z-index: -1;
+  padding: 4rem 0;
+  margin: 0;
 }
 
-.author:hover,
-.author:active {
-  box-shadow: 0 0 10px #33333350;
+.project{
+  width: 60%;
+  display: block;
+  height: 600px;
+  margin: 3rem auto;
+  position: relative;
 }
 
-/* profile__section */
-
-.profile__section{
-
+.project img{
+  width: 660px;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
 }
+
+.project .project__header{
+  position: absolute;
+  top: 4rem;
+  left: 1.7rem;
+  display: block;
+}
+
+.project__header h3{
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.project__header p::after{
+  content:  " ";
+  height: 6px;
+  width: 32%;
+  background-color: #3ca0e7;
+  display: block;
+}
+
+.project__header p{
+  font-size: 2.2rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.project__header ul{
+  list-style: none;
+  display: block;
+  width: 60%;
+  margin: 1.6rem auto;
+  text-align: left;
+}
+
+.project__header ul li{
+  width: 28px;
+  height: auto;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+/* ##################################################
+############ PROJECTS CONTAINER END ###############
+#####################################################*/
