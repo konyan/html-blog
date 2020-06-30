@@ -239,21 +239,6 @@ ul li ul li a {
 ############ SKILLS CONTAINER END ###############
 #####################################################*/
 
-/*************************************************************
-  SECTIONS BASIC STYLES START
-**************************************************************/
-section {
-  position: relative;
-  min-height: 80vh;
-  width: 100%;
-  transform-style: inherit;
-}
-
-
-/*************************************************************
-  SECTIONS BASIC STYLES END
-**************************************************************/
-
 /* ##################################################
 ############ SKILLS CONTAINER START ###############
 #####################################################*/
@@ -269,16 +254,24 @@ section {
 .project{
   width: 60%;
   display: block;
-  height: 600px;
-  margin: 3rem auto;
+  height: 500px;
+  margin: 1rem auto;
   position: relative;
 }
 
 .project img{
-  width: 660px;
+  width: 74%;
   position: absolute;
+}
+
+.project img.right{
   top: 1rem;
   right: 1rem;
+}
+
+.project img.left{
+  top: 1rem;
+  left: 1rem;
 }
 
 .project .project__header{
@@ -288,12 +281,24 @@ section {
   display: block;
 }
 
+.project .project__header-right{
+  position: absolute;
+  top: 4rem;
+  right: 1.7rem;
+  display: block;
+}
+
 .project__header h3{
   font-size: 2.5rem;
   font-weight: 700;
 }
 
-.project__header p::after{
+.project__header-right h3{
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.project__header a::after{
   content:  " ";
   height: 6px;
   width: 32%;
@@ -301,18 +306,46 @@ section {
   display: block;
 }
 
-.project__header p{
+.project__header-right a::after{
+  content: "";
+  height: 6px;
+  width: 32%;
+  background-color: #3ca0e7;
+  display: block;
+  margin-left: 70%;
+}
+
+.project__header a{
   font-size: 2.2rem;
   font-weight: 500;
+  color: #727272;
   cursor: pointer;
+  padding-bottom: 1rem;
 }
+
+.project__header-right a{
+  font-size: 2.2rem;
+  text-align: right;
+  font-weight: 500;
+  color: #727272;
+  cursor: pointer;
+  display: block;
+  padding-bottom: 1rem;
+}
+
 
 .project__header ul{
   list-style: none;
   display: block;
-  width: 60%;
   margin: 1.6rem auto;
   text-align: left;
+}
+
+.project__header-right ul{
+  list-style: none;
+  display: block;
+  margin: 1.6rem auto;
+  text-align: right;
 }
 
 .project__header ul li{
@@ -323,6 +356,61 @@ section {
   margin-right: 1rem;
 }
 
+.project__header-right ul li{
+  width: 28px;
+  height: auto;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 1rem;
+}
+
 /* ##################################################
 ############ PROJECTS CONTAINER END ###############
+#####################################################*/
+
+
+/* ##################################################
+############ FOOTER CONTAINER END ###############
+#####################################################*/
+footer{
+  width: 100%;
+}
+
+footer h3{
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  color: #3ca0e7;
+  position: relative;
+}
+
+footer h3::after{
+  content: "";
+  margin: 1rem;
+  height: 6px;
+  width: 10%;
+  background-color: #3ca0e7;
+  display: block;
+  text-align: center;
+  margin: auto;
+}
+
+footer ul{
+  width: 32%;
+  margin: 1rem auto;
+  padding: 1rem 0;
+  list-style: none;
+  text-align: center;
+}
+
+footer ul li{
+  display: inline-block;
+  margin-right: 1.5rem;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+
+/* ##################################################
+############ FOOTER CONTAINER END ###############
 #####################################################*/
