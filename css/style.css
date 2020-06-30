@@ -374,6 +374,9 @@ ul li ul li a {
 #####################################################*/
 footer{
   width: 100%;
+  box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  padding: 1rem 0;
 }
 
 footer h3{
@@ -409,6 +412,11 @@ footer ul li{
   font-size: 14px;
   cursor: pointer;
 }
+
+footer ul li a{
+  color: #333;
+}
+
 
 
 /* ##################################################
