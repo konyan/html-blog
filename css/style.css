@@ -112,8 +112,32 @@ ul li ul li a {
 .profile__name{
   font-size: 50px;
   font-weight: 700;
-  padding: 32px 0;
+  padding: 0;
+  display: inline-block;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .1em solid #3ca0e7; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 2rem auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation:
+    typing 3s steps(30, end),
+    blink-caret .5s step-end infinite;
 }
+
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 60% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  60% { border-color: #3ca0e7 }
+}
+
+
 
 .profile__position{
   color: #3ca0e7;
@@ -379,43 +403,110 @@ footer{
   padding: 1rem 0;
 }
 
-footer h3{
-  display: block;
-  text-align: center;
-  font-size: 30px;
-  color: #3ca0e7;
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 a {
   position: relative;
-}
-
-footer h3::after{
-  content: "";
-  margin: 1rem;
-  height: 6px;
-  width: 10%;
-  background-color: #3ca0e7;
   display: block;
-  text-align: center;
+  overflow: hidden;
+  opacity: 0;
+  width: 1em;
+  height: 1em;
+  margin: 0 auto;
+  background-color: #303132;
+  font-size: 3em;
+  line-height: 3em;
+  color: transparent;
+  border-radius: 50%;
+  border: 0em solid #39F;
+  transition: all .15s ease-in-out;
+  animation: logo .25s ease-out 2.4s 1 normal forwards;
+}
+
+h1 a:hover, h1 a:focus { background-color: #39F; }
+h1 a:active { transform: scale(.8); }
+
+@keyframes logo {
+  0%   { transform: rotate(25deg) scale(.01); opacity: 0; }
+  70%  { transform: scale(1.4); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.slogan {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 0em;
+  height: 1.25em;
+  margin: 1em auto;
+  font-size: 2em;
+  line-height: 1.5em;
+  border-right: .125em solid #39F;
+  box-sizing: content-box;
+  animation-name: blink-start, typing, blink-end;
+  animation-duration: 1s, 1s, 1s;
+  animation-timing-function: linear, steps(13, end), linear;
+  animation-delay: 0s, 1s, 2s;
+  animation-iteration-count: 1, 1, infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+.slogan span {
+  display: block;
+  width: 8em;
+}
+
+@keyframes typing {
+  from { width: 0em; }
+  to   { width: 8em; }
+}
+
+@keyframes blink-start {
+  from, to { border-color: #39F; }
+  50% { border-color: transparent; }
+}
+
+@keyframes blink-end {
+  from, to { border-color: #39F; }
+  50% { border-color: transparent; }
+}
+.contact {
+  position: relative;
+  width: 40%;
   margin: auto;
-}
-
-footer ul{
-  width: 32%;
-  margin: 1rem auto;
-  padding: 1rem 0;
-  list-style: none;
   text-align: center;
 }
 
-footer ul li{
+.contact a {
   display: inline-block;
-  margin-right: 1.5rem;
-  font-size: 14px;
-  cursor: pointer;
+  overflow: hidden;
+  opacity: 0;
+  width: 84px;
+  line-height: 2em;
+  margin: 0 .20em;
+  color: #555;
+  font-size: 1.5em;
+  transition: background-color .2s ease-in-out;
+  border-radius: 50%;
+  animation: icons .2s ease-out 0s 1 normal forwards;
 }
 
-footer ul li a{
-  color: #333;
+@keyframes icons {
+  0%    { transform: translateY(3em); opacity: 0; }
+  70%   { transform: translateY(-.5em); opacity: 1; }
+  100%  { transform: translateY(0em); opacity: 1; }
 }
+
+.contact a:nth-child(1) { animation-delay: 2.5s; }
+.contact a:nth-child(2) { animation-delay: 2.55s; }
+.contact a:nth-child(3) { animation-delay: 2.6s; }
+.contact a:nth-child(4) { animation-delay: 2.65s; }
+
+.contact a:hover { color: #39F; }
 
 
 
